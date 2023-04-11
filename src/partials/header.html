@@ -1,0 +1,37 @@
+<header class="header">
+  <div class="container container">
+    <div class="header__logo">
+      <a href="index.html">
+        <svg class="icon__film" width="24" height="24">
+          <use href="./images/icons/icons.svg#film"></use>
+        </svg>
+        <span class="span__film">Filmoteka</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a class="nav__link current" href="index.html">HOME</a></li>
+          <!-- Тут мав би бути MyLibrary -->
+          <li class="firebases sign-in">
+            <button id="signin" class="firebase__button" >
+          Sign in
+            </button>
+            <button id="signout" class="firebase__button close">
+          Sign out
+            </button>
+            <div id="googleUser"></div></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="search">
+      <form class="search__form" id="search-form">
+        <input type="text" class="form-field" name="searchQuery" autocomplete="off" placeholder="Movie search" />
+
+        <button type="submit" class="search__button" aria-label="search">
+          <svg class="icon__search" width="24" height="24">
+            <use href="./images/icons/icons.svg#search"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</header>

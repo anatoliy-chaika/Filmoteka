@@ -1,0 +1,70 @@
+.header-my-library {
+  background-image: url('../images/header/header-my-d.jpeg');
+
+  @include mobile() {
+    background-image: url('../images/header/header-m-m.jpeg');
+  }
+
+  @include tablet() {
+    background-image: url('../images/header/header-my-t.jpeg');
+  }
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+
+  margin: auto;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.header-my-library .container {
+  height: 230px;
+}
+
+.buttons {
+  justify-content: center;
+  box-sizing: border-box;
+  width: auto;
+  padding-top: 66px;
+  display: flex;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  &__style {
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    height: 44px;
+    width: 148px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #ffffff;
+    cursor: pointer;
+
+    @include mobile() {
+      width: 130px;
+    }
+
+    @include tablet() {
+      width: 152px;
+    }
+
+    &--focus {
+      background: #ff6b01;
+      box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
+      border: none;
+    }
+  }
+}

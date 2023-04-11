@@ -1,0 +1,318 @@
+.movie {
+  &__description-card {
+    @include tablet() {
+      display: flex;
+      gap: 68px;
+    }
+
+    @include desktop() {
+      display: flex;
+      gap: 16px;
+    }
+  }
+
+  &__img {
+    max-width: 240px;
+    max-height: 357px;
+    margin-bottom: 20px;
+
+    @include tablet() {
+      max-width: 264px;
+      max-height: 374px;
+    }
+
+    @include desktop() {
+      max-width: 375px;
+      max-height: 478px;
+    }
+  }
+
+  &__title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23/20;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 20px;
+
+    @include desktop() {
+      font-size: 30px;
+      line-height: calc(30 / 35);
+    }
+  }
+
+  &__characters {
+    display: block;
+  }
+
+  &__about {
+    font-family: 'Roboto';
+    font-style: normal;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    text-transform: uppercase;
+    color: #000000;
+  }
+
+  &__about-description {
+    min-width: 292px;
+    max-height: 236px;
+
+    margin-bottom: 20px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(20 / 12);
+    color: #000000;
+
+    overflow: hidden;
+  }
+
+  &__to-watched,
+  &__to-queue,
+  &__watched,
+  &__queue {
+    font-family: 'Roboto';
+    font-style: normal;
+    width: 110px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    background: #ff6b01;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 27px;
+    cursor: pointer;
+
+    @include tablet() {
+      width: 125px;
+
+      padding: 14px 9px;
+    }
+
+    @include desktop() {
+      width: 136px;
+    }
+  }
+
+  &__to-watched[js-disabled],
+  &__to-queue[js-disabled],
+  &__watched[js-disabled],
+  &__queue[js-disabled] {
+    display: flex;
+    justify-content: center;
+    min-width: 110px;
+    padding: 12px 8px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+
+    cursor: pointer;
+    border: 1px #000000 solid;
+    border-radius: 5px;
+    background-color: transparent;
+
+    @include tablet() {
+      width: 125px;
+      padding: 13px 7px;
+    }
+
+    @include desktop() {
+      width: 136px;
+      padding: 13px 8px;
+    }
+  }
+}
+
+.button {
+  &__list {
+    display: flex;
+    gap: 20px;
+
+    @include tablet() {
+      gap: 15px;
+    }
+  }
+
+  &__modal,
+  &__trailer--close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 999999;
+
+    width: 30px;
+    height: 30px;
+
+    background-color: transparent;
+    background-image: url(../images/icons/icons.svg#modal-close);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none;
+  }
+
+  &__trailer--close {
+    top: 0;
+    right: 0;
+
+    width: 30px;
+    height: 30px;
+
+    background-color: #fff;
+  }
+}
+
+.modal {
+  overflow: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  padding-left: 18px;
+  padding-top: 48px;
+  padding-right: 22px;
+  padding-bottom: 40px;
+  max-width: 280px;
+  height: 100vh;
+
+  background-color: white;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include tablet() {
+    padding-left: 36px;
+    padding-top: 40;
+    padding-right: 72px;
+    padding-bottom: 40px;
+    max-width: 704px;
+    max-height: 552px;
+    overflow: hidden;
+  }
+
+  @include desktop() {
+    padding-left: 36px;
+    padding-top: 40;
+    padding-right: 72px;
+    padding-bottom: 40px;
+    max-width: 806px;
+    max-height: 558px;
+    overflow: hidden;
+  }
+}
+
+.character {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  color: #8c8c8c;
+  width: 108px;
+
+  @include desktop() {
+    width: 152px;
+  }
+
+  &__table {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__item {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    color: #000000;
+    font-family: 'Roboto';
+    font-style: normal;
+  }
+}
+
+.vote {
+  background-color: #ff6b01;
+  padding: 1px 10px;
+  color: #ffffff;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  margin-right: 5px;
+
+  &__grey {
+    padding: 1px 10px;
+    background: #f7f7f7;
+    border-radius: 5px;
+    margin-left: 2px;
+  }
+
+  &__slash {
+    color: #8c8c8c;
+  }
+}
+
+.trailer-btn {
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  min-width: 110px;
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+
+  cursor: pointer;
+  border: 1px #000000 solid;
+  border-radius: 5px;
+  padding: 12px 8px;
+
+  &--mtzero {
+    margin-top: 15px;
+  }
+
+  @include desktop() {
+    width: 136px;
+    padding: 13px 8px;
+  }
+
+  @include tablet() {
+    width: 125px;
+    padding: 13px 7px;
+  }
+
+  &:hover,
+  &:focus {
+    background: #ff6b01;
+    color: #ffffff;
+    border: none;
+  }
+}

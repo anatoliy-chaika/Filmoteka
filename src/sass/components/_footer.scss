@@ -1,0 +1,39 @@
+.footer {
+  height: 100px;
+  background: #F7F7F7;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    padding: 36px;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__item {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #545454;
+  }
+
+  &__slash {
+    border-right: 1px solid rgba(84, 84, 84, 1);
+    padding-right: 5px;
+
+  }
+
+  &__link {
+    border-bottom: 1px solid rgba(84, 84, 84, 1);
+    color: rgba(84, 84, 84, 1);
+  }
+
+}
+
+.icon__heart {
+  fill: #FF6B08;
+}

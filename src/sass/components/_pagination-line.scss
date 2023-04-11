@@ -1,0 +1,87 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  gap: 8px;
+
+  &__item {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 12px;
+    line-height: calc(16 / 12);
+
+    fill: #000;
+    stroke: #000;
+
+    &:not(&--dots):hover,
+    &:not(&--dots):focus {
+      background-color: #ff6b08;
+      border-radius: 5px;
+      color: #fff;
+      stroke: #fff;
+      fill: #fff;
+      outline: none;
+      transition: all 250ms;
+    }
+
+    &.item-left-arrow,
+    &.item-right-arrow {
+      background-color: #f7f7f7;
+      background-image: url(../images/icons/icons.svg#arrow-left);
+      background-size: 16px 16px;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 5px;
+    }
+
+    &.item-right-arrow {
+      background-image: url(../images/icons/icons.svg#arrow-right);
+    }
+
+    @include mobilmod() {
+      &--desktop {
+        display: none;
+      }
+    }
+
+    &--isActive {
+      background-color: #ff6b08;
+      border-radius: 5px;
+      color: #fff;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &__icon {
+    stroke: inherit;
+
+    &--point {
+      fill: inherit;
+    }
+  }
+}
+
+.pagination__item--isActive button {
+  color: #fff;
+}
+
+.pagination__item:hover button {
+  color: #fff;
+}

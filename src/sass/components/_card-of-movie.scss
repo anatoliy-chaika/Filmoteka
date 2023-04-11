@@ -1,0 +1,163 @@
+.movie_card {
+  position: relative;
+}
+
+.movie_card_img {
+  margin-bottom: 10px;
+  width: 100%;
+
+  // max-width: 280px;
+  @include tablet() {
+    .movie_card_img {
+      margin-bottom: 8px;
+      // max-width: 336px;
+    }
+  }
+
+  @include desktop() {
+    .movie_card_img {
+      margin-bottom: 12px;
+      // max-width: 395px;
+    }
+  }
+}
+
+// @media (min-width: 767px) {
+//   .movie_card_img {
+//     margin-bottom: 8px;
+//     // max-width: 336px;
+//   }
+// }
+
+// @media (min-width: 1200px) {
+//   .movie_card_img {
+//     margin-bottom: 12px;
+//     // max-width: 395px;
+//   }
+// }
+
+.movie_card_desc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.movie_card_title {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  color: #000000;
+  text-transform: uppercase;
+  max-width: 280px;
+
+  @include tablet() {
+    max-width: 336px;
+  }
+
+  @include desktop() {
+    max-width: 395px;
+    font-size: 20px;
+    line-height: calc(24 / 20);
+  }
+}
+
+// @media (min-width: 1200px) {
+//   .movie_card_title {
+//     font-size: 20px;
+//     line-height: calc(24 / 20);
+//   }
+// }
+
+.movie_card_ganres {
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  color: #ff6b08;
+  position: relative;
+  padding-right: 5px;
+
+  @include desktop() {
+    font-size: 20px;
+    line-height: calc(24 / 20);
+  }
+}
+
+// @media (min-width: 1200px) {
+//   .movie_card_ganres {
+//     font-size: 20px;
+//     line-height: calc(24 / 20);
+//   }
+// }
+
+// .movie_card_ganres::after {
+//   content: '';
+//   display: inline-block;
+//   position: absolute;
+//   background-color: #ff6b08;
+//   width: 1px;
+//   height: 100%;
+
+//   right: -5px;
+//   bottom: 2px;
+// }
+
+.movie_card_year {
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  color: #ff6b08;
+  margin-right: 9px;
+
+  @include desktop() {
+    font-size: 20px;
+    margin-right: 8px;
+  }
+
+  // @media (min-width: 767px) {
+  //   font-size: 20px;
+  //   margin-right: 8px;
+  // }
+}
+
+.movie_card_rating {
+  color: #ffff;
+  background-color: #ff6b08;
+  font-family: 'Roboto';
+
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  padding: 1px 6px;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 40px -1px #ff6b08;
+  border-radius: 5px;
+}
+
+.img__thumb {
+  position: relative;
+  width: 280px;
+  height: 402px;
+  background-size: cover;
+  margin-bottom: 10px;
+
+  @include desktop() {
+    width: 395px;
+    height: 574px;
+    margin-bottom: 8px;
+  }
+
+  @include tablet() {
+    width: 336px;
+    height: 455px;
+    margin-bottom: 12px;
+  }
+}
+.movie_card {
+  cursor: pointer;
+}
